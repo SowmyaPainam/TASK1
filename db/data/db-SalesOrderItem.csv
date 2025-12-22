@@ -1,0 +1,5 @@
+ID,ProductName,Quantity,Price,salesOrder_ID,createdAt,createdBy,modifiedAt,modifiedBy
+aaaaaaa1-aaaa-aaaa-aaaa-aaaaaaaaaaa1,Laptop,5,50000.00,11111111-1111-1111-1111-111111111111
+aaaaaaa2-aaaa-aaaa-aaaa-aaaaaaaaaaa2,Mouse,20,500.00,11111111-1111-1111-1111-111111111111
+aaaaaaa3-aaaa-aaaa-aaaa-aaaaaaaaaaa3,Server,2,350000.00,22222222-2222-2222-2222-222222222222
+aaaaaaa4-aaaa-aaaa-aaaa-aaaaaaaaaaa4,Keyboard,15,1500.00,33333333-3333-3333-3333-333333333333
