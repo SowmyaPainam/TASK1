@@ -1,4 +1,6 @@
 {
+  "xsappname": "task1",
+  "tenant-mode": "dedicated",
   "scopes": [
     {
       "name": "$XSAPPNAME.IsManager",
@@ -9,23 +11,31 @@
       "description": "Employee"
     }
   ],
-  "attributes": [],
   "role-templates": [
     {
       "name": "IsManager",
       "description": "generated",
       "scope-references": [
         "$XSAPPNAME.IsManager"
-      ],
-      "attribute-references": []
+      ]
     },
     {
       "name": "Employee",
       "description": "generated",
       "scope-references": [
         "$XSAPPNAME.Employee"
-      ],
-      "attribute-references": []
+      ]
     }
-  ]
+  ],
+  "authorities": [
+    "$ACCEPT_GRANTED_AUTHORITIES"
+  ],
+  "oauth2-configuration": {
+    "token-validity": 9000,
+    "redirect-uris": [
+      "https://*.cfapps.us10-001.hana.ondemand.com/login/callback"
+    ]
+  },
+  "xsenableasyncservice": "true",
+  "attributes": []
 }

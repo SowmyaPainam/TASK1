@@ -3,15 +3,17 @@
   "version": "1.0.0",
   "description": "A simple CAP project.",
   "dependencies": {
-    "@sap/cds": "^9",
-    "express": "^4",
+    "@cap-js/hana": "^2",
     "@sap-cloud-sdk/connectivity": "^4",
     "@sap-cloud-sdk/http-client": "^4",
     "@sap-cloud-sdk/resilience": "^4",
-    "@sap/xssec": "^4"
+    "@sap/cds": "^9",
+    "@sap/xssec": "^4",
+    "express": "^4"
   },
   "devDependencies": {
     "@cap-js/sqlite": "^2",
+    "@sap/cds-dk": "^9",
     "cds-plugin-ui5": "^0.13.0"
   },
   "scripts": {
@@ -29,17 +31,26 @@
         }
       },
       "auth": {
-        "kind":"mocked",
-        "users":{
-          "manager1":{
-            "roles":["IsManager"]
+        "kind": "mocked",
+        "users": {
+          "manager1": {
+            "roles": [
+              "IsManager"
+            ]
           },
-          "employee1":{
-            "roles":["Employee"]
+          "employee1": {
+            "roles": [
+              "Employee"
+            ]
           }
         }
+      },
+      "[production]": {
+        "db": "hana",
+        "auth": {
+          "kind": "xsuaa"
+        }
       }
-      
     }
   },
   "workspaces": [

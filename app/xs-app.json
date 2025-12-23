@@ -1,0 +1,18 @@
+{
+  "welcomeFile": "/project1/webapp/index.html",
+  "authenticationMethod": "route",
+  "routes": [
+    {
+      "source": "^/project1/webapp/(.*)$",
+      "localDir": "/project1/webapp/",
+      "authenticationType": "xsuaa",
+      "scope": "$XSAPPNAME.Viewer"
+    },
+    {
+      "source": "^/(.*)$",
+      "authenticationType": "xsuaa",
+      "scope": "$XSAPPNAME.Viewer",
+      "localDir": "."
+    }
+  ]
+}
